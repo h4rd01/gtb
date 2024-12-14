@@ -6,50 +6,50 @@ export const CUSTOM_RULES = [];
 export const UNIFIED_RULES = [
 	{
 		name: 'Ad Block',
-		outbound: '🛑 广告拦截',
+		outbound: '🛑 advertisement blocking',
 		site_rules: ['category-ads-all'],
 		ip_rules: []
 	},
 	{
 		name: 'AI Services',
-		outbound: '💬 AI 服务',
+		outbound: '💬 AI service',
 		site_rules: ['openai', 'anthropic','jetbrains-ai','perplexity'],
 		ip_rules: []
 	},
 	{
 		name: 'Bilibili',
-		outbound: '📺 哔哩哔哩',
+		outbound: '📺 serge',
 		site_rules: ['bilibili'],
 		ip_rules: []
 	},
 	{
 		name: 'Youtube',
-		outbound: '📹 油管视频',
+		outbound: '📹 Tubing Video',
 		site_rules: ['youtube'],
 		ip_rules: []
 	},
 	{
 		name: 'Google',
-		outbound: '🔍 谷歌服务',
+		outbound: '🔍 Google service',
 		site_rules: ['google'],
 		ip_rules: ['google']
 	},
 
 	{
 		name: 'Private',
-		outbound: '🏠 私有网络',
+		outbound: '🏠 private network',
 		site_rules: [],
 		ip_rules: ['private']
 	},
 	{
 		name: 'Location:CN',
-		outbound: '🔒 国内服务',
+		outbound: '🔒 Domestic services',
 		site_rules: ['geolocation-cn'],
 		ip_rules: ['cn']
 	},
 	{
 		name: 'Telegram',
-		outbound: '📲 电报消息',
+		outbound: '📲 telegraphic message',
 		site_rules: [],
 		ip_rules: ['telegram']
 	},
@@ -61,55 +61,55 @@ export const UNIFIED_RULES = [
 	},
 	{
 		name: 'Microsoft',
-		outbound: 'Ⓜ️ 微软服务',
+		outbound: 'Ⓜ️ Microsoft service',
 		site_rules: ['microsoft'],
 		ip_rules: []
 	},
 	{
 		name: 'Apple',
-		outbound: '🍏 苹果服务',
+		outbound: '🍏 Apple service',
 		site_rules: ['apple'],
 		ip_rules: []
 	},
 	{
 		name: 'Social Media',
-		outbound: '🌐 社交媒体',
+		outbound: '🌐 social media',
 		site_rules: ['facebook', 'instagram', 'twitter', 'tiktok', 'linkedin'],
 		ip_rules: []
 	  },
 	  {
 		name: 'Streaming',
-		outbound: '🎬 流媒体',
+		outbound: '🎬 streaming media',
 		site_rules: ['netflix', 'hulu', 'disney', 'hbo', 'amazon','bahamut'],
 		ip_rules: []
 	  },
 	  {
 		name: 'Gaming',
-		outbound: '🎮 游戏平台',
+		outbound: '🎮 gaming platform',
 		site_rules: ['steam', 'epicgames', 'ea', 'ubisoft', 'blizzard'],
 		ip_rules: []
 	  },
 	  {
 		name: 'Education',
-		outbound: '📚 教育资源',
+		outbound: '📚 educational resources',
 		site_rules: ['coursera', 'edx', 'udemy', 'khanacademy', 'category-scholar-!cn'],
 		ip_rules: []
 	  },
 	  {
 		name: 'Financial',
-		outbound: '💰 金融服务',
+		outbound: '💰 financial service',
 		site_rules: ['paypal', 'visa', 'mastercard','stripe','wise'],
 		ip_rules: []
 	  },
 	  {
 		name: 'Cloud Services',
-		outbound: '☁️ 云服务',
+		outbound: '☁️ cloud service',
 		site_rules: ['aws', 'azure', 'digitalocean', 'heroku', 'dropbox'],
 		ip_rules: []
 	  },
 	  {
 		name: 'Non-China',
-		outbound: '🌐 非中国',
+		outbound: '🌐 non-China',
 		site_rules: ['geolocation-!cn'],
 		ip_rules: []
 	  }
@@ -235,7 +235,7 @@ export function generateRuleSets(selectedRules = [], customRules = []) {
     type: 'remote',
     format: 'binary',
     url: `${SITE_RULE_SET_BASE_URL}${SITE_RULE_SETS[rule]}`,
-    download_detour: '⚡ 自动选择'
+    download_detour: '⚡ automatic selection'
   }));
 
   const ip_rule_sets = Array.from(ipRuleSets).map(rule => ({
@@ -243,7 +243,7 @@ export function generateRuleSets(selectedRules = [], customRules = []) {
     type: 'remote',
     format: 'binary',
     url: `${IP_RULE_SET_BASE_URL}${IP_RULE_SETS[rule]}`,
-    	download_detour: '⚡ 自动选择'
+    	download_detour: '⚡ automatic selection'
   }));
 
   if(!selectedRules.includes('Non-China')){
@@ -252,7 +252,7 @@ export function generateRuleSets(selectedRules = [], customRules = []) {
 		type: 'remote',
 		format: 'binary',
 		url: `${SITE_RULE_SET_BASE_URL}geosite-geolocation-!cn.srs`,
-		download_detour: '⚡ 自动选择'
+		download_detour: '⚡ automatic selection'
 	});
   }
 
@@ -265,7 +265,7 @@ export function generateRuleSets(selectedRules = [], customRules = []) {
 					type: 'remote',
 					format: 'binary',
 					url: `${SITE_RULE_SET_BASE_URL}geosite-${site.trim()}.srs`,
-					download_detour: '⚡ 自动选择'
+					download_detour: '⚡ automatic selection'
 				});
 			});
 		}
@@ -276,7 +276,7 @@ export function generateRuleSets(selectedRules = [], customRules = []) {
 					type: 'remote',
 					format: 'binary',
 					url: `${IP_RULE_SET_BASE_URL}geoip-${ip.trim()}.srs`,
-					download_detour: '⚡ 自动选择'
+					download_detour: '⚡ automatic selection'
 				});
 			});
 		}
@@ -297,7 +297,7 @@ export const SING_BOX_CONFIG = {
 				address: "tcp://1.1.1.1",
 				address_resolver: "dns_resolver",
 				strategy: "ipv4_only",
-				detour: "🚀 节点选择"
+				detour: "🚀 Node Selection"
 			},
 			{
 				tag: "dns_direct", 
