@@ -32,19 +32,19 @@ export class ConfigBuilder extends BaseConfigBuilder {
 
         this.config.outbounds.unshift({
             type: "urltest",
-            tag: "⚡ 自动选择",
+            tag: "⚡ automatic selection",
             outbounds: DeepCopy(proxyList),
         });
 
-        proxyList.unshift('DIRECT', 'REJECT', '⚡ 自动选择');
-        outbounds.unshift('🚀 节点选择','GLOBAL');
+        proxyList.unshift('DIRECT', 'REJECT', '⚡ automatic selection');
+        outbounds.unshift('🚀 Node Selection','GLOBAL');
         
         outbounds.forEach(outbound => {
-            if (outbound !== '🚀 节点选择') {
+            if (outbound !== '🚀 Node Selection') {
                 this.config.outbounds.push({
                     type: "selector",
                     tag: outbound,
-                    outbounds: ['🚀 节点选择', ...proxyList]
+                    outbounds: ['🚀 Node Selection', ...proxyList]
                 });
             } else {
                 this.config.outbounds.unshift({
@@ -60,15 +60,15 @@ export class ConfigBuilder extends BaseConfigBuilder {
                 this.config.outbounds.push({
                     type: "selector",
                     tag: rule.name,
-                    outbounds: ['🚀 节点选择', ...proxyList]
+                    outbounds: ['🚀 Node Selection', ...proxyList]
                 });
             });
         }
 
         this.config.outbounds.push({
             type: "selector",
-            tag: "🐟 漏网之鱼",
-            outbounds: ['🚀 节点选择', ...proxyList]
+            tag: "🐟 homeless exile",
+            outbounds: ['🚀 Node Selection', ...proxyList]
         });
     }
 
@@ -97,7 +97,7 @@ export class ConfigBuilder extends BaseConfigBuilder {
         );
 
         this.config.route.auto_detect_interface = true;
-        this.config.route.final = '🐟 漏网之鱼';
+        this.config.route.final = '🐟 homeless exile';
 
         return this.config;
     }
