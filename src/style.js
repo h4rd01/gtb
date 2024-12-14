@@ -217,15 +217,15 @@ export const generateStyles = () => `
     visibility: hidden;
     opacity: 0;
     background-color: var(--card-bg);
-    position: fixed; // 改为固定定位
+    position: fixed; // Change to fixed positioning
     background-color: var(--card-bg);
     color: var(--text-color);
     border: 1px solid var(--input-border);
     border-radius: 6px;
     padding: 10px;
-    z-index: 1000; // 提高z-index值
+    z-index: 1000; // Increase z-index value
     width: 300px;
-    max-width: 90vw; // 限制最大宽度
+    max-width: 90vw; // Limit maximum width
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s, visibility 0.3s;
   }
@@ -457,7 +457,7 @@ export const generateStyles = () => `
     color: var(--dropdown-hover-text);
   }
 
-  /* 通用过渡效果 */
+  /* Generic Transition Effect */
   .card,
   .btn,
   .form-control,
@@ -470,7 +470,7 @@ export const generateStyles = () => `
     transition: all var(--transition-speed) var(--transition-timing);
   }
 
-  /* 高级选项展开/收起动画 */
+  /* Advanced Options Expand/collapse animation */
   #advancedOptions {
     max-height: 0;
     opacity: 0;
@@ -487,7 +487,7 @@ export const generateStyles = () => `
     transform: translateY(0);
   }
 
-  /* 订阅链接容器动画 */
+  /* Subscribe to Link Container Animation */
   #subscribeLinksContainer {
     max-height: 0;
     opacity: 0;
@@ -503,7 +503,7 @@ export const generateStyles = () => `
     transform: translateY(0);
   }
 
-  /* 按钮悬停动画 */
+  /* Button Hover Animation */
   .btn {
     transform: translateY(0);
   }
@@ -513,7 +513,7 @@ export const generateStyles = () => `
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
-  /* 复制按钮成功动画 */
+  /* Copy Button Success Animation */
   @keyframes successPulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
@@ -524,7 +524,7 @@ export const generateStyles = () => `
     animation: successPulse 0.3s var(--transition-timing);
   }
 
-  /* QR码模态框动画 */
+  /* QRCode Modal Box Animation */
   .qr-modal {
     opacity: 0;
     visibility: hidden;
@@ -547,7 +547,7 @@ export const generateStyles = () => `
     transform: scale(1) translateY(0);
   }
 
-  /* 自定义规则添加/删除动画 */
+  /* Custom rules to add/remove animations */
   .custom-rule {
     opacity: 0;
     transform: translateY(20px);
@@ -576,13 +576,13 @@ export const generateStyles = () => `
     }
   }
 
-  /* 暗色模式切换动画 */
+  /* Dark mode switching animation */
   body {
     transition: background-color 0.3s var(--transition-timing),
                 color 0.3s var(--transition-timing);
   }
 
-  /* 工具提示动画 */
+  /* Tooltip animation */
   .tooltip-content {
     opacity: 0;
     visibility: hidden;
