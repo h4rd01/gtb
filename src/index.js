@@ -37,7 +37,7 @@ async function handleRequest(request) {
       }
 
       // If no rules are selected, use the default rules
-      const rulesToUse = selectedRules.length > 0 ? selectedRules : ['广告拦截', '谷歌服务', '国外媒体', '电报消息'];
+      const rulesToUse = selectedRules.length > 0 ? selectedRules : ['advertisement blocking', 'Google service', 'foreign news media', 'telegraphic message'];
 
       const xrayUrl = `${url.origin}/xray?config=${encodeURIComponent(inputString)}`;
       const singboxUrl = `${url.origin}/singbox?config=${encodeURIComponent(inputString)}&selectedRules=${encodeURIComponent(JSON.stringify(rulesToUse))}&customRules=${encodeURIComponent(JSON.stringify(customRules))}pin=${pin}`;
