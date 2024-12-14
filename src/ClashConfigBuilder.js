@@ -35,7 +35,7 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
         const proxyList = this.config.proxies.map(proxy => proxy.name);
         
         this.config['proxy-groups'].push({
-            name: '⚡ 自动选择',
+            name: '⚡ automatic selection',
             type: 'url-test',
             proxies: DeepCopy(proxyList),
             url: 'https://www.gstatic.com/generate_204',
@@ -43,15 +43,15 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
             lazy: false
         });
 
-        proxyList.unshift('DIRECT', 'REJECT', '⚡ 自动选择');
-        outbounds.unshift('🚀 节点选择');
+        proxyList.unshift('DIRECT', 'REJECT', '⚡ automatic selection');
+        outbounds.unshift('🚀 Node Selection');
         
         outbounds.forEach(outbound => {
-            if (outbound !== '🚀 节点选择') {
+            if (outbound !== '🚀 Node Selection') {
                 this.config['proxy-groups'].push({
                     type: "select",
                     name: outbound,
-                    proxies: ['🚀 节点选择', ...proxyList]
+                    proxies: ['🚀 Node Selection', ...proxyList]
                 });
             } else {
                 this.config['proxy-groups'].unshift({
@@ -67,15 +67,15 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
                 this.config['proxy-groups'].push({
                     type: "select",
                     name: rule.name,
-                    proxies: ['🚀 节点选择', ...proxyList]
+                    proxies: ['🚀 Node Selection', ...proxyList]
                 });
             });
         }
 
         this.config['proxy-groups'].push({
             type: "select",
-            name: "🐟 漏网之鱼",
-            proxies: ['🚀 节点选择', ...proxyList]
+            name: "🐟 homeless exile",
+            proxies: ['🚀 Node Selection', ...proxyList]
         });
     }
     formatConfig() {
@@ -91,7 +91,7 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
         });
 
         // Add the final catch-all rule
-        this.config.rules.push('MATCH,🐟 漏网之鱼');
+        this.config.rules.push('MATCH,🐟 homeless exile');
 
         return yaml.dump(this.config);
     }
