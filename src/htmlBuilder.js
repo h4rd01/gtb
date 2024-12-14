@@ -15,11 +15,11 @@ const generateHead = () => `
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sublink Worker是一款强大的在线订阅链接转换工具,支持V2Ray/Xray、SingBox、Clash等多种客户端，提供自定义规则和高效转换，帮助您轻松管理和优化代理节点。">
-    <meta name="keywords" content="Sublink, Worker, 订阅链接, 代理, Xray, SingBox, Clash, V2Ray, 自定义规则, 在线, 订阅转换, 机场订阅, 节点管理, 节点解析">
-    <title>Sublink Worker - 轻量高效的订阅转换工具 | 支持V2Ray/Xray、SingBox、Clash</title>
-    <meta property="og:title" content="Sublink Worker - 轻量高效的订阅链接转换工具">
-    <meta property="og:description" content="强大的在线订阅链接转换工具,支持多种代理协议和自定义规则">
+    <meta name="description" content="Sublink Worker is a powerful online subscription link conversion tool, support forV2Ray/Xray、SingBox、ClashIt provides custom rules and efficient transformations to help you easily manage and optimise your proxy nodes.
+    <meta name="keywords" content="Sublink, Worker, Subscription Links, Agents, Xray, SingBox, Clash, V2Ray, Custom Rules, Online, Subscription Conversion, Airport Subscriptions, Node Management, node analysis">
+    <title>Sublink Worker - Lightweight and efficient subscription conversion tool | adjuvantV2Ray/Xray、SingBox、Clash</title>
+    <meta property="og:title" content="Sublink Worker - Lightweight and efficient subscription link conversion tool">
+    <meta property="og:description" content="Powerful online subscription link conversion tool, support for multiple proxy protocols and custom rules">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sublink-worker.sageer.me/">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -582,14 +582,14 @@ const submitFormFunction = () => `
     localStorage.removeItem('advancedToggle');
     localStorage.removeItem('selectedRules');
     localStorage.removeItem('predefinedRules');
-    localStorage.removeItem('configEditor');  // 添加清除 configEditor
-    localStorage.removeItem('configType');    // 添加清除 configType
+    localStorage.removeItem('configEditor');  // Add Clearance configEditor
+    localStorage.removeItem('configType');    // Add Clearance configType
     
     document.getElementById('inputTextarea').value = '';
     document.getElementById('advancedToggle').checked = false;
     document.getElementById('advancedOptions').classList.remove('show');
     document.getElementById('configEditor').value = '';
-    document.getElementById('configType').value = 'singbox';  // 重置为默认值
+    document.getElementById('configType').value = 'singbox';  // Reset to default
     
     localStorage.removeItem('customPath');
     document.getElementById('customShortCode').value = '';
