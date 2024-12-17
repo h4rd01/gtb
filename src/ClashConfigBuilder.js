@@ -106,14 +106,6 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
                     port: proxy.server_port,
                     cipher: proxy.method,
                     password: proxy.password
-		    tls: proxy.tls?.enabled || false,
-                    servername: proxy.tls?.server_name || '',
-                    network: proxy.transport?.type || 'tcp',
-	            plugin: v2ray-plugin,
-                    'plugin-opts': proxy.transport?.type === 'ws' ? {
-                        path: proxy.transport.path,
-                        headers: proxy.transport.headers
-                    } : undefined
                 };
             case 'vmess':
                 return {
@@ -131,7 +123,7 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
                         path: proxy.transport.path,
                         headers: proxy.transport.headers
                     } : undefined
-                };
+              };
             case 'vless':
                 return {
                     name: proxy.tag,
