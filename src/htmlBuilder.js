@@ -62,7 +62,7 @@ const generateDarkModeToggle = () => `
 `;
 
 const generateGithubLink = () => `
-  <a href="https://siub.us.kg/en" target="_blank" rel="noopener noreferrer" class="github-link">
+  <a href="https://bnm.siub.us.kg/en" target="_blank" rel="noopener noreferrer" class="github-link">
     <i class="fab fa-github"></i>
   </a>
 `;
