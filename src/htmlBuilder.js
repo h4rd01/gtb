@@ -21,7 +21,7 @@ const generateHead = () => `
     <meta property="og:title" content="Sublink Worker - Lightweight and efficient subscription link conversion tool">
     <meta property="og:description" content="Powerful online subscription link conversion tool, support for multiple proxy protocols and custom rules">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sublink.tigo.pw/">
+    <meta property="og:url" content="https://cv.siub.us.kg/">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
